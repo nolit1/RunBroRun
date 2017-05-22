@@ -22,10 +22,10 @@ public class InputHandler implements InputProcessor {
     public boolean keyDown(int keycode) {
         switch (keycode)
         {
-            case Input.Keys.UP:
+            case Input.Keys.W:
                 myBro.setUpMove(true);
                 break;
-            case Input.Keys.DOWN:
+            case Input.Keys.S:
                 myBro.setDownMove(true);
                 break;
         }
@@ -37,10 +37,10 @@ public class InputHandler implements InputProcessor {
 
         switch (keycode)
         {
-            case Input.Keys.UP:
+            case Input.Keys.W:
                 myBro.setUpMove(false);
                 break;
-            case Input.Keys.DOWN:
+            case Input.Keys.S:
                 myBro.setDownMove(false);
                 break;
         }

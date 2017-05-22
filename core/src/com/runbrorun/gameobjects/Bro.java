@@ -12,7 +12,7 @@ public class Bro {
     private Vector2 velocity; //скорость
     private Rectangle boundingRectangle; //+
 
-    private float rotation; //когда умирает, то падает вниз более динамично чем просто движение вниз
+    private float rotation;
     private int width;
     private int height;
     private boolean isAlive;
