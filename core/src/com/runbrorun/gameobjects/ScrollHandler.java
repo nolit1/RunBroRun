@@ -13,7 +13,7 @@ public class ScrollHandler {
     private Thorns columnThorns1, columnThorns2, columnThorns3;
     private GameWorld gameWorld;
 
-    public static final int SCROLL_SPEED = -69;
+    public static final int SCROLL_SPEED = -79;
     public static final int THORNS_GAP = 49;
 
     public ScrollHandler(GameWorld gameWorld, float yPos) {

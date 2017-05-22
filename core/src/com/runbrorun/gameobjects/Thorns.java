@@ -9,12 +9,12 @@ import java.util.Random;
 public class Thorns extends Scrollable {
 
     private Random r;
-    private Rectangle thornsUp, thornsDown;//, barUp, barDown;
+    private Rectangle thornsUp, thornsDown;
 
-    private static final int VERTICAL_GAP = GameRenderer.rang; //высота м/д трубами
+    private static final int VERTICAL_GAP = GameRenderer.rang; //высота м/д шипами
     private static final int THORNS_WIDTH = 24;
     private static final int THORNS_HEIGHT = 11;
-    private float groundY; //там, где заканчивается трава
+    private float groundY;
     private Boolean isScored = false;
 
     Thorns(float x, float y, int width, int height, float scrollSpeed, float groundY) {
