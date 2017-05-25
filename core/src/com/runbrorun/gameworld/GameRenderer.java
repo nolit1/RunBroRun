@@ -12,6 +12,9 @@ import com.badlogic.gdx.graphics.g2d.Animation;
 
 public class GameRenderer {
 
+    public static int MIN_HEIGHT = 136;
+    public static final int MAX_HEIGHT = 2;
+
     private GameWorld myWorld;
     private ShapeRenderer shapeRenderer;
 
@@ -74,19 +77,19 @@ public class GameRenderer {
 
     private void drawThorns() {
 
-        batcher.draw(thornsUp, columnThorns1.getX() - 1,
+        batcher.draw(thornsUp, columnThorns1.getX(),
                 columnThorns1.getY() + columnThorns1.getHeight() - 14, 24, 14);
-        batcher.draw(thornsDown, columnThorns1.getX() - 1,
+        batcher.draw(thornsDown, columnThorns1.getX(),
                 columnThorns1.getY() + columnThorns1.getHeight() + rang, 24, 14); ///////
 
-        batcher.draw(thornsUp, columnThorns2.getX() - 1,
+        batcher.draw(thornsUp, columnThorns2.getX(),
                 columnThorns2.getY() + columnThorns2.getHeight() - 14, 24, 14);
-        batcher.draw(thornsDown, columnThorns2.getX() - 1,
+        batcher.draw(thornsDown, columnThorns2.getX(),
                 columnThorns2.getY() + columnThorns2.getHeight() + rang, 24, 14);
 
-        batcher.draw(thornsUp, columnThorns3.getX() - 1,
+        batcher.draw(thornsUp, columnThorns3.getX(),
                 columnThorns3.getY() + columnThorns3.getHeight() - 14, 24, 14);
-        batcher.draw(thornsDown, columnThorns3.getX() - 1,
+        batcher.draw(thornsDown, columnThorns3.getX(),
                 columnThorns3.getY() + columnThorns3.getHeight() + rang, 24, 14);
     }
 

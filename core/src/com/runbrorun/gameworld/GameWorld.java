@@ -7,6 +7,7 @@ import com.runbrorun.gameobjects.Bro;
 
 import static com.runbrorun.Helpers.AssetLoader.music;
 import static com.runbrorun.Helpers.AssetLoader.prefs;
+import static com.runbrorun.gameworld.GameRenderer.MIN_HEIGHT;
 
 
 public class GameWorld {
@@ -30,7 +31,7 @@ public class GameWorld {
         music.play();
         AssetLoader.music.setLooping(true);
         bro = new Bro(33, midPointY - 5, 17, 12);
-        scroller = new ScrollHandler(this, midPointY + 66);
+        scroller = new ScrollHandler(this, MIN_HEIGHT);
     }
 
     public boolean isHighScore() {

@@ -15,6 +15,7 @@ public class ScrollHandler {
 
     public static final int SCROLL_SPEED = -79;
     public static final int THORNS_GAP = 49;
+    public static final int MIN_RANG = 15; //минимальное расстояние между шипами
 
     public ScrollHandler(GameWorld gameWorld, float yPos) {
         this.gameWorld = gameWorld;
@@ -59,7 +60,8 @@ public class ScrollHandler {
                 + bro.getWidth()) {
             addScore(1);
             columnThorns1.setScored(true);
-            if (GameRenderer.rang > 13) GameRenderer.rang -= 1;
+            if (GameRenderer.rang > MIN_RANG) GameRenderer.rang -= 1;
+
             AssetLoader.coin.play();
 
         } else if (!columnThorns2.isScored()
@@ -67,7 +69,7 @@ public class ScrollHandler {
                 + bro.getWidth()) {
             addScore(1);
             columnThorns2.setScored(true);
-            if (GameRenderer.rang > 13) GameRenderer.rang -= 1;
+            if (GameRenderer.rang > MIN_RANG) GameRenderer.rang -= 1;
             AssetLoader.coin.play();
 
         } else if (!columnThorns3.isScored()
@@ -75,7 +77,7 @@ public class ScrollHandler {
                 + bro.getWidth()) {
             addScore(1);
             columnThorns3.setScored(true);
-            if (GameRenderer.rang > 13) GameRenderer.rang -= 1;
+            if (GameRenderer.rang > MIN_RANG) GameRenderer.rang -= 1;
             AssetLoader.coin.play();
 
         }

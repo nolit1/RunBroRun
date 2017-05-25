@@ -11,7 +11,7 @@ public class Thorns extends Scrollable {
     private Random r;
     private Rectangle thornsUp, thornsDown;
 
-    private static final int VERTICAL_GAP = GameRenderer.rang; //высота м/д шипами
+    //высота м/д шипами
     private static final int THORNS_WIDTH = 24;
     private static final int THORNS_HEIGHT = 11;
     private float groundY;
@@ -31,7 +31,7 @@ public class Thorns extends Scrollable {
 
         //вызываем метод из родительского класса Scrollable
         super.update(delta);
-
+        int VERTICAL_GAP = GameRenderer.rang;
 
         thornsUp.set(position.x - (THORNS_WIDTH - width) / 2, position.y + height
                 - THORNS_HEIGHT, THORNS_WIDTH, THORNS_HEIGHT);

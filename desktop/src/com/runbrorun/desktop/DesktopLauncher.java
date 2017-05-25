@@ -2,7 +2,7 @@ package com.runbrorun.desktop;
 
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
-import com.runbrorun.RunBroRun;
+import com.runbrorun.Bro;
 
 public class DesktopLauncher {
 	public static void main (String[] arg) {
@@ -10,6 +10,6 @@ public class DesktopLauncher {
 		config.title = "Run Bro";
 		config.width = 272;
 		config.height = 408;
-		new LwjglApplication(new RunBroRun(), config);
+		new LwjglApplication(new Bro(), config);
 	}
 }

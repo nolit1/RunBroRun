@@ -8,6 +8,9 @@ import com.runbrorun.gameworld.GameRenderer;
 
 public class Bro {
 
+    private static final int SPEED = 120;
+
+
     private Vector2 position;
     private Vector2 velocity; //скорость
     private Rectangle boundingRectangle; //+
@@ -36,16 +39,16 @@ public class Bro {
     public void update(float delta) {
 
         // проверяем столкновение с верхом
-        if (position.y < 2) {
-            position.y = 2;
+        if (position.y < GameRenderer.MAX_HEIGHT) {
+            position.y = GameRenderer.MAX_HEIGHT;
         }
 
         // проверяем столкновение с низом
-        if (position.y > GameRenderer.midPointY + 66) {
-            position.y = GameRenderer.midPointY + 66;
+        if (position.y > GameRenderer.MIN_HEIGHT) {
+            position.y = GameRenderer.MIN_HEIGHT;
         }
 
-        boundingRectangle.set(position.x, position.y, 17, 12 );
+        boundingRectangle.set(position.x, position.y, 17, 12);
 
     }
 
@@ -99,10 +102,10 @@ public class Bro {
     public void updateMotion() {
         if (isAlive) {
             if (UpMove) {
-                position.y -= 120 * Gdx.graphics.getDeltaTime();
+                position.y -= SPEED * Gdx.graphics.getDeltaTime();
             }
             if (DownMove) {
-                position.y += 120 * Gdx.graphics.getDeltaTime();
+                position.y += SPEED * Gdx.graphics.getDeltaTime();
             }
         }
     }
