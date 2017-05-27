@@ -44,7 +44,7 @@ public class Thorns extends Scrollable {
     public void reset(float newX) {
         super.reset(newX);
         // Изменяет высоту на случайное значение
-        height = r.nextInt(90) + 15;
+        height = r.nextInt(90) + 13;
         isScored = false;
     }
 

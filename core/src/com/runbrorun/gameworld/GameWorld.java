@@ -29,6 +29,7 @@ public class GameWorld {
         prefs.clear();
         currentState = GameState.READY;
         music.play();
+        music.setVolume(0.4f);
         AssetLoader.music.setLooping(true);
         bro = new Bro(33, midPointY - 5, 17, 12);
         scroller = new ScrollHandler(this, MIN_HEIGHT);
@@ -40,8 +41,8 @@ public class GameWorld {
 
     public void updateRunning(float delta) {
 
-        if (delta > .15f) {
-            delta = .15f;
+        if (delta > .30f) {
+            delta = .30f;
         }
 
         bro.updateMotion();
@@ -81,7 +82,6 @@ public class GameWorld {
     private void updateReady(float delta) {
     }
 
-
     public boolean isReady() {
         return currentState == GameState.READY;
     }
@@ -105,7 +105,9 @@ public class GameWorld {
 
     public void addScore(int increment) {
         score += increment;
+        if (score < 0) score = 0;
     }
+
 
     public int getScore() {
         return score;

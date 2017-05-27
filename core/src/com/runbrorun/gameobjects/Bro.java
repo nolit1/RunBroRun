@@ -8,7 +8,7 @@ import com.runbrorun.gameworld.GameRenderer;
 
 public class Bro {
 
-    private static final int SPEED = 120;
+    private static final int SPEED = 140;
 
 
     private Vector2 position;

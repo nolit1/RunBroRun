@@ -6,13 +6,14 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType;
+import com.runbrorun.Screens.GameScreen;
 import com.runbrorun.gameobjects.*;
 import com.runbrorun.Helpers.AssetLoader;
 import com.badlogic.gdx.graphics.g2d.Animation;
 
 public class GameRenderer {
 
-    public static int MIN_HEIGHT = 136;
+    public static final int MIN_HEIGHT = 185;
     public static final int MAX_HEIGHT = 2;
 
     private GameWorld myWorld;
@@ -27,6 +28,7 @@ public class GameRenderer {
     private Bro bro;
     private Thorns columnThorns1, columnThorns2, columnThorns3;
     public static int rang = 50; //расстояние между шипами
+    private int score = 0;
 
     // Game Assets
     private TextureRegion bg;
@@ -104,11 +106,11 @@ public class GameRenderer {
 
 
         // Заливаем задний фон (небо)
-        shapeRenderer.setColor(39 / 255.0f, 64 / 255.0f, 94 / 255.0f, 1);
+        shapeRenderer.setColor(45 / 255.0f, 45 / 255.0f, 41 / 255.0f, 1);
         shapeRenderer.rect(0, 0, 136, midPointY + 66);
 
         // Рисуем (низ, нижнее небо что ли назвать)
-        shapeRenderer.setColor(52 / 255.0f, 81 / 255.0f, 123 / 255.0f, 1);
+        shapeRenderer.setColor(45 / 255.0f, 45 / 255.0f, 41 / 255.0f, 1);
         shapeRenderer.rect(0, midPointY + 66, 136, 52);
 
         shapeRenderer.end();

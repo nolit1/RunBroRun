@@ -32,7 +32,7 @@ public class AssetLoader {
 
     public static void load() {
 
-        texture = new Texture(Gdx.files.internal("data/texture4.png"));
+        texture = new Texture(Gdx.files.internal("data/texture3.png"));
 
         //благодаря этой штуке происходит нормальное масштабирование
         texture.setFilter(TextureFilter.Nearest, TextureFilter.Nearest);
