@@ -17,7 +17,7 @@ public class Scrollable {
         velocity = new Vector2(scrollSpeed, 0);
         this.width = width;
         this.height = height;
-        isScrolledLeft = false;
+        isScrolledLeft = false; //просто комментарий чтобы отправить на гитхаб
     }
 
     public void update(float delta) {
